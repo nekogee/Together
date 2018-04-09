@@ -2,8 +2,9 @@
 
 <RelativeLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -68,7 +69,7 @@
 
 
         <LinearLayout
-            android:id="@+id/tab42"
+            android:id="@+id/tab_1"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="45dp"
@@ -99,9 +100,8 @@
                 android:background="@drawable/v" />
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/tab43"
+            android:id="@+id/tab_2"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="130dp"
@@ -131,9 +131,8 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/v" />
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/tab44"
+            android:id="@+id/tab_3"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="180dp"
@@ -165,7 +164,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tab452"
+            android:id="@+id/tab_4"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="230dp"
@@ -197,7 +196,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tab45"
+            android:id="@+id/tab_5"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="315dp"
@@ -236,8 +235,6 @@
 
 
         </LinearLayout>
-
-
 
     </RelativeLayout>
 

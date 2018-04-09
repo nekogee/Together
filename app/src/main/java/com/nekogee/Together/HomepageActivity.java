@@ -1,6 +1,7 @@
 package com.nekogee.Together;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -16,7 +17,7 @@ import com.ashokvarma.bottomnavigation.TextBadgeItem;
  * Created by hui jie on 2018/4/6.
  */
 
-public class MainActivity  extends AppCompatActivity  {
+public class HomepageActivity extends  AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class MainActivity  extends AppCompatActivity  {
         replaceFragment(new AnotherActivity());
         //未读消息数
         numberBadgeItem.setText("5");
-
+        Log.d("qqqq","000b");
         //下方导航栏的选择事件
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
             @Override

@@ -2,190 +2,134 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
     android:background="#EAEAEA" >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <LinearLayout
-        android:id="@+id/tab42"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#2231c270"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_lightbulb_outline_black_36dp" />
+    </android.support.design.widget.AppBarLayout>
 
+        <Button
+            android:id="@+id/button_user"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/ic_keyboard_backspace" />
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="相册" />
-
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
-    </LinearLayout>
+            android:text="个人主页"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="13dp"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+    </FrameLayout>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:id="@+id/user_bg"
+        android:src="@drawable/userbackground"
+        android:scaleType="centerCrop" />
     <LinearLayout
-        android:id="@+id/tab43"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="160dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
-
-        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pic2"
+            />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_donut_large_black_36dp" />
-
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            >
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="收藏" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:text="关注 "/>
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:text="23"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:text="  |  粉丝 "/>
+            <TextView
+                android:id="@+id/follower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:text="166"/>
 
-        <ImageView
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/tab44"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_explore_black_36dp" />
-
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="钱包" />
-
-        <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
+            android:textColor="#FFF"
+            android:text="I wanna be the GOAT"/>
+         </LinearLayout>
     </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/tab45"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
-
-        <ImageView
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_marginTop="330dp">
+        <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_label_outline_black_36dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="卡包" />
-
-        <ImageView
+            android:text="动态"
+            />
+        <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
-    </LinearLayout>
+            android:text="关于我"
+            />
 
-
-    <LinearLayout
-        android:id="@+id/tab46"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_label_outline_black_36dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="表情" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/tab47"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="360dp"
-        android:background="@drawable/linearlayout_boder"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_stars_black_36dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0.82"
-            android:gravity="center_vertical"
-            android:text="设置" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/v" />
-    </LinearLayout>
+    </android.support.design.widget.TabLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FF31c270"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:text="发消息"/>
 </RelativeLayout>
