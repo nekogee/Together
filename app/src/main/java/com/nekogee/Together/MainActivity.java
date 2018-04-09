@@ -42,7 +42,8 @@ public class MainActivity  extends AppCompatActivity  {
                 .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "我的").setActiveColorResource(R.color.colorPrimary))
                 .setFirstSelectedPosition(0)
                 .initialise();
-
+        //默认初始活动
+        replaceFragment(new AnotherActivity());
         //未读消息数
         numberBadgeItem.setText("5");
 
@@ -52,15 +53,15 @@ public class MainActivity  extends AppCompatActivity  {
             public void onTabSelected(int position) {
                 switch (position) {
                     case 0: {
-                        Log.d("qqq","000b");
+                        Log.d("qqqq","000b");
                         replaceFragment(new AnotherActivity());
-                        Log.d("qqq","000a");
+                        Log.d("qqqq","000a");
                     }
                         break;
                     case 1:  {
-                        Log.d("qqq","111b");
+                        Log.d("qqqq","111b");
                         replaceFragment(new UserHomeActivity());
-                        Log.d("qqq","111b");
+                        Log.d("qqqq","111b");
                     }
                         break;
                     case 2: replaceFragment(new AnotherActivity());
@@ -83,6 +84,7 @@ public class MainActivity  extends AppCompatActivity  {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment,fragment);
+        Log.d("qqqq","ino");
         transaction.commit();
     }
 }

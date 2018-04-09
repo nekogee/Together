@@ -10,7 +10,7 @@ import android.view.ViewGroup;
  * Created by hui jie on 2018/4/6.
  */
 
-public class AnotherActivity extends Fragment {
+public class AnotherActivity extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_view_1_item,container,false);

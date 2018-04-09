@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EAEAEA" >
+
+
+    <LinearLayout
+        android:id="@+id/tab42"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_lightbulb_outline_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="相册" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tab43"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_donut_large_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="收藏" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab44"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_explore_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="钱包" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tab45"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_label_outline_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="卡包" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tab46"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_label_outline_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="表情" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tab47"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/linearlayout_boder"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_stars_black_36dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.82"
+            android:gravity="center_vertical"
+            android:text="设置" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/v" />
+    </LinearLayout>
+</RelativeLayout>
