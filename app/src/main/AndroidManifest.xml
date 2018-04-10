@@ -9,14 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTranslucentTheme">
-        <activity android:name="com.nekogee.Together.HomepageActivity">
+        <activity android:name="com.nekogee.Together.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserHomePageActivity"></activity>
+        <activity android:name=".UserHomePageActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MessageActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".WishEditActivity"/>
+        <activity android:name=".SkillEditActivity"/>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.nekogee.Together;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,11 +18,14 @@ import com.ashokvarma.bottomnavigation.TextBadgeItem;
  * Created by hui jie on 2018/4/6.
  */
 
-public class HomepageActivity extends  AppCompatActivity{
+public class MainActivity extends  AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(intent);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,10 +45,10 @@ public class HomepageActivity extends  AppCompatActivity{
                 .addItem(new BottomNavigationItem(R.drawable.ic_lightbulb_outline_black_36dp,"技能").setActiveColorResource(R.color.colorPrimary))
                 .addItem(new BottomNavigationItem(R.drawable.ic_question_answer_black_36dp,"消息").setActiveColorResource(R.color.colorPrimary).setBadgeItem(numberBadgeItem))
                 .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "我的").setActiveColorResource(R.color.colorPrimary))
-                .setFirstSelectedPosition(0)
+                .setFirstSelectedPosition(1)
                 .initialise();
         //默认初始活动
-        replaceFragment(new AnotherActivity());
+        replaceFragment(new SkillActivity());
         //未读消息数
         numberBadgeItem.setText("5");
         Log.d("qqqq","000b");
@@ -55,13 +59,13 @@ public class HomepageActivity extends  AppCompatActivity{
                 switch (position) {
                     case 0: {
                         Log.d("qqqq","000b");
-                        replaceFragment(new AnotherActivity());
+                        replaceFragment(new WishActivity());
                         Log.d("qqqq","000a");
                     }
                         break;
                     case 1:  {
                         Log.d("qqqq","111b");
-                        replaceFragment(new UserHomeActivity());
+                        replaceFragment(new SkillActivity());
                         Log.d("qqqq","111b");
                     }
                         break;
