@@ -69,7 +69,7 @@ public class MainActivity extends  AppCompatActivity{
                         Log.d("qqqq","111b");
                     }
                         break;
-                    case 2: replaceFragment(new AnotherActivity());
+                    case 2: replaceFragment(new ChattingFragment());
                         break;
                     case 3: replaceFragment(new UserHomeActivity());
                         break;

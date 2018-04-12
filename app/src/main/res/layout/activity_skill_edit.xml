@@ -16,13 +16,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#EAEAEA">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#D3D3D3">
+            android:background="@android:color/white">
 
             <EditText
                 android:layout_width="match_parent"
@@ -67,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="#D3D3D3">
+            android:background="@android:color/white">
 
             <ImageView
                 android:layout_width="50dp"
@@ -85,7 +86,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/wish_pic"
+                android:src="@drawable/wish_pic1"
                 android:layout_margin="15dp" />
 
         </LinearLayout>
@@ -96,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="#D3D3D3">
+            android:background="@android:color/white">
 
             <TextView
                 android:layout_width="match_parent"
@@ -104,14 +105,14 @@
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
-                android:text="你帮助了Ta希望能得到的回报是："
+                android:text="你帮助了Ta，希望能得到的回报是："
                 />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="15dp"
-                android:background="#FFF"/>
+                />
 
         </LinearLayout>
 
@@ -122,7 +123,9 @@
             android:textSize="25sp"
             android:background="#8FBC8F"
             android:layout_gravity="center"
-            android:layout_margin="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             />
 
 
