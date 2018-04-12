@@ -9,19 +9,19 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#2231c270"
-            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
-            />
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-    </android.support.design.widget.AppBarLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#2231c270"
+                android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+                />
+
+        </android.support.design.widget.AppBarLayout>
 
         <Button
             android:id="@+id/button_user"
@@ -44,84 +44,84 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:id="@+id/user_bg"
-        android:src="@drawable/userbackground"
-        android:scaleType="centerCrop" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="80dp"
-            android:layout_gravity="center"
-            android:src="@drawable/pic2"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            >
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:text="关注 "/>
-            <TextView
-                android:id="@+id/following"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFF"
-                android:text="23"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFF"
-                android:text="  |  粉丝 "/>
-            <TextView
-                android:id="@+id/follower"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFF"
-                android:text="166"/>
-
-        </LinearLayout>
+            android:layout_height="270dp"
+            android:id="@+id/user_bg"
+            android:src="@drawable/userbackground"
+            android:scaleType="centerCrop" />
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:text="I wanna be the GOAT"/>
-         </LinearLayout>
-    </LinearLayout>
-    </RelativeLayout>
-
-
-    <android.support.design.widget.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff"
-        android:id="@+id/tab_layout"
-        android:layout_marginTop="330dp">
-        <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="动态"/>
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pic2"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="关注 "/>
+                <TextView
+                    android:id="@+id/following"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="23"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="  |  粉丝 "/>
+                <TextView
+                    android:id="@+id/follower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="166"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="I wanna be the GOAT"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_marginTop="330dp">
         <android.support.design.widget.TabItem
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-            android:text="关于我"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动态"
+            />
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我"
+            />
+
     </android.support.design.widget.TabLayout>
     <Button
         android:layout_width="match_parent"

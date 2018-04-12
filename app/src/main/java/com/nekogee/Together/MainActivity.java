@@ -1,6 +1,7 @@
 package com.nekogee.Together;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,7 +24,7 @@ public class MainActivity extends  AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getWindow().setNavigationBarColor(Color.BLACK); //写法一
         Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         startActivity(intent);
 

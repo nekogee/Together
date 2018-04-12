@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class UserHomePageActivity extends AppCompatActivity {
 
-    TabLayout tabLayout = findViewById(R.id.tab_layout);
+    //TabLayout tabLayout = findViewById(R.id.tab_layout);
     //ViewPager viewPager = findViewById(R.id.view_pager);
     private ArrayList<View> mList;
     private String[] mTitle;

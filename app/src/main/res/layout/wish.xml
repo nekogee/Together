@@ -50,7 +50,7 @@
             android:layout_width="0dp"
             android:textSize="18sp"
             android:layout_height="wrap_content"
-            android:hint="技能搜索"
+            android:hint="心愿搜索"
             android:maxLines="1"
             android:layout_weight="5"/>
 
