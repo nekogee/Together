@@ -55,17 +55,28 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_personal_image"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="70dp"
                 android:layout_gravity="center"
                 android:src="@drawable/pic2"
+                />
+            <TextView
+                android:id="@+id/user_personal_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:text="nekogee"
                 />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_gravity="center"
                 >
                 <TextView
@@ -74,7 +85,7 @@
                     android:textColor="#FFF"
                     android:text="关注 "/>
                 <TextView
-                    android:id="@+id/following"
+                    android:id="@+id/user_personal_following"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
@@ -85,7 +96,7 @@
                     android:textColor="#FFF"
                     android:text="  |  粉丝 "/>
                 <TextView
-                    android:id="@+id/follower"
+                    android:id="@+id/user_personal_follower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
@@ -99,6 +110,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center">
                 <TextView
+                    android:id="@+id/user_personal_bio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
@@ -106,23 +118,21 @@
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
-        android:layout_marginTop="330dp">
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="动态"
-            />
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="关于我"
-            />
-
-    </android.support.design.widget.TabLayout>
+        android:layout_marginTop="330dp"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:fitsSystemWindows="true"

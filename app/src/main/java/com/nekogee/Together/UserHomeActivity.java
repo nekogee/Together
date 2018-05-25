@@ -2,18 +2,11 @@ package com.nekogee.Together;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.LinearLayoutCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class UserHomeActivity extends android.support.v4.app.Fragment {
 
