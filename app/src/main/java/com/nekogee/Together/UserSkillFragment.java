@@ -39,14 +39,11 @@ public class UserSkillFragment extends Fragment {
     }
 
     private void createSkill() {
-        for (int i = 0; i < 3; ++i) {
-            Skill skill1 = new Skill(R.drawable.user_img3, "HHHHH", "I am HHHHH", "我的心愿标题wish3", R.drawable.wish_pic3, "我的心愿内容wishDescription3");
+            Skill skill1 = new Skill(R.drawable.pic2, "nekogee", "to be the GOAT", "我想", R.drawable.wish_pic1, "我的心愿内容wishDescription3");
             skillList.add(skill1);
-            Skill skill2 = new Skill(R.drawable.user_img2, "Nekogee", "I am Nekogee", "我的心愿标题wish2", R.drawable.wish_pic2, "我的心愿内容wishDescription2");
+            Skill skill2 = new Skill(R.drawable.pic2, "nekogee", "to be the GOAT", "我的心愿标题wish2", R.drawable.wish_pic1, "我的心愿内容wishDescription2");
             skillList.add(skill2);
-            Skill skill3 = new Skill(R.drawable.user_img1, "Jane", "I am Jane", "我的心愿标题wish1", R.drawable.wish_pic1, "我的心愿内容wishDescription1");
-            skillList.add(skill3);
-        }
+
     }
 
 }

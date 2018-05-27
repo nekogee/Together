@@ -39,13 +39,11 @@ public class UserWishFragment extends Fragment {
     }
 
     private void createWish() {
-        for (int i = 0; i < 3; ++i) {
-            Wish wish1 = new Wish(R.drawable.user_img1, "Jane", "I am Jane", "我的心愿标题wish1", R.drawable.wish_pic1, "我的心愿内容wishDescription1");
+
+            Wish wish1 = new Wish(R.drawable.pic2, "nekogee", "to be the GOAT", "我的心愿标题wish1", R.drawable.wish_pic1, "我的心愿内容wishDescription1");
             wishList.add(wish1);
-            Wish wish2 = new Wish(R.drawable.user_img2, "Nekogee", "I am Nekogee", "我的心愿标题wish2", R.drawable.wish_pic2, "我的心愿内容wishDescription2");
+            Wish wish2 = new Wish(R.drawable.pic2, "nekogee", "to be the GOAT", "我的心愿标题wish2", R.drawable.wish_pic1, "我的心愿内容wishDescription2");
             wishList.add(wish2);
-            Wish wish3 = new Wish(R.drawable.user_img3, "HHHHH", "I am HHHHH", "我的心愿标题wish3", R.drawable.wish_pic3, "我的心愿内容wishDescription3");
-            wishList.add(wish3);
-        }
+
     }
 }
