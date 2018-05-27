@@ -65,11 +65,11 @@ public class UserHomePageActivity extends AppCompatActivity {
         UserInfo userInfo = DataSupport.findFirst(UserInfo.class);
         //Log.d("userinfo", "onCreate: "+userInfo.getFollowing());
 
-        following.setText(""+userInfo.getFollowing());
-        follower.setText(""+userInfo.getFollower());
-        username.setText(""+userInfo.getUsername());
-        imageView.setImageResource(userInfo.getImageID());
-        bio.setText(userInfo.getBio()+"");
+        following.setText("30");
+        follower.setText("132");
+        username.setText("nekogee");
+        imageView.setImageResource(R.drawable.pic2);
+        bio.setText("to be the GOAT");
 
         initView();
         initViewPager();

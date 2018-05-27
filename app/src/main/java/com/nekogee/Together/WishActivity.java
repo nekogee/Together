@@ -67,91 +67,16 @@ public class WishActivity extends Fragment {
         Log.d("WishActivity", "bbbb");
         recyclerView.setAdapter(adapter);
     }
-   /*     mLocationClient = new LocationClient(getActivity().getApplicationContext());
-        mLocationClient.registerLocationListener(new MyLocationListener());
-        List<String> permissionList = new ArrayList<>();
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.READ_PHONE_STATE);
-        }
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        }
-        if (!permissionList.isEmpty()) {
-            String[] permissions = permissionList.toArray(new String[permissionList.size()]);
-            ActivityCompat.requestPermissions(this.getActivity(), permissions, 1);
-        } else {
-            requestLocation();
-        }
-    }
 
-    private void requestLocation(){
-           initLocation() ;
-           mLocationClient.start() ;
-    }
-
-    private void initLocation(){
-            LocationClientOption option = new LocationClientOption() ;
-            option.setScanSpan(5000);
-            option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
-            option.setIsNeedAddress(true);
-            mLocationClient.setLocOption(option);
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        mLocationClient.stop() ;
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode , String[] permissions , int[] grantResults){
-            switch (requestCode){
-                case 1:
-                    if(grantResults.length > 0){
-                        for(int result : grantResults) {
-                            if (result != PackageManager.PERMISSION_GRANTED) {
-                                Toast.makeText(this.getActivity(), "必须同意所有权限才能使用本程序", Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        }
-                        requestLocation() ;
-                    }else{
-                        Toast.makeText(this.getActivity() , "发生未知错误" , Toast.LENGTH_SHORT).show() ;
-                    }
-                    break ;
-                default:
-            }
-    }
-
-    public class MyLocationListener implements BDLocationListener {
-
-        @Override
-        public void onReceiveLocation(final BDLocation location){
-            getActivity().runOnUiThread(new Runnable(){
-                @Override
-                public void run(){
-                    StringBuilder currentPosition = new StringBuilder() ;
-                    currentPosition.append(location.getCity()).append(location.getDirection()) ;
-                    positionText.setText(currentPosition) ;
-                }
-            });
-        }
-
-    }
-*/
     private void createWish() {
         Log.d("WishActivity" , "aaaaa") ;
         if(wishList.isEmpty()) {
             for (int i = 0; i < 1; ++i) {
-                Wish wish1 = new Wish(R.drawable.user_img4, "Jane", "I am Jane", "我的心愿标题wish1hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh", R.drawable.wish_pic1, "我的心愿内容wishDescription1");
+                Wish wish1 = new Wish(R.drawable.user_img4, "Jane", "I am Jane", "找人一起合租！！", R.drawable.wish_pic1, "找人一起合租啦，一个月四千，最好是女生~");
                 wishList.add(wish1);
-                Wish wish2 = new Wish(R.drawable.user_img2, "Bobby", "I am Bobby", "我的心愿标题wish2", R.drawable.wish_pic2, "我的心愿内容wishDescription2hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+                Wish wish2 = new Wish(R.drawable.user_img2, "Bobby", "I am Bobby", "有人想领养小猫吗", R.drawable.wish_pic2, "捡到一只橘猫，有没有好心人想要领养的？");
                 wishList.add(wish2);
-                Wish wish3 = new Wish(R.drawable.user_img3, "HHHHH", "I am HHHHH", "我的心愿标题wish3", R.drawable.wish_pic3, "我的心愿内容wishDescription3");
-                wishList.add(wish3);
+
             }
         }
 

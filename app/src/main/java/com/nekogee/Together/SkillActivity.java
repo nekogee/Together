@@ -61,90 +61,17 @@ public class SkillActivity extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         SkillAdapter adapter = new SkillAdapter(skillList);
         recyclerView.setAdapter(adapter);
-  /*      mLocationClient = new LocationClient(getActivity().getApplicationContext());
-        mLocationClient.registerLocationListener(new MyLocationListener());
-        List<String> permissionList = new ArrayList<>();
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.READ_PHONE_STATE);
-        }
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        }
-        if (!permissionList.isEmpty()) {
-            String[] permissions = permissionList.toArray(new String[permissionList.size()]);
-            ActivityCompat.requestPermissions(this.getActivity(), permissions, 1);
-        } else {
-            requestLocation();
-        }*/
-    }
-
-  /*  private void requestLocation(){
-        initLocation() ;
-        mLocationClient.start() ;
-    }
-
-    private void initLocation(){
-        LocationClientOption option = new LocationClientOption() ;
-        option.setScanSpan(5000);
-        option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
-        option.setIsNeedAddress(true);
-        mLocationClient.setLocOption(option);
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        mLocationClient.stop() ;
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode , String[] permissions , int[] grantResults){
-        switch (requestCode){
-            case 1:
-                if(grantResults.length > 0){
-                    for(int result : grantResults) {
-                        if (result != PackageManager.PERMISSION_GRANTED) {
-                            Toast.makeText(this.getActivity(), "必须同意所有权限才能使用本程序", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                    }
-                    requestLocation() ;
-                }else{
-                    Toast.makeText(this.getActivity() , "发生未知错误" , Toast.LENGTH_SHORT).show() ;
-                }
-                break ;
-            default:
-        }
-    }
-
-    public class MyLocationListener implements BDLocationListener {
-
-        @Override
-        public void onReceiveLocation(final BDLocation location){
-            getActivity().runOnUiThread(new Runnable(){
-                @Override
-                public void run(){
-                    StringBuilder currentPosition = new StringBuilder() ;
-                    currentPosition.append(location.getCity()).append(location.getDirection()) ;
-                    positionText.setText(currentPosition) ;
-                }
-            });
-        }
 
     }
-*/
+
     private void createSkill() {
         if(skillList.isEmpty()) {
             for (int i = 0; i < 1; ++i) {
-                Skill skill1 = new Skill(R.drawable.user_img3, "HHHHH", "I am HHHHH", "我的心愿标题wish3", R.drawable.wish_pic3, "我的心愿内容wishDescription3");
+                Skill skill1 = new Skill(R.drawable.user_img3, "lemon", "啊你在看我", "可以帮大家寄养宠物~", R.drawable.wish_pic3, "最近比较有空，我也很喜欢小动物，可以免费帮大家寄养小动物！");
                 skillList.add(skill1);
-                Skill skill2 = new Skill(R.drawable.user_img2, "Bobby", "I am Bobby", "我的心愿标题wish2", R.drawable.wish_pic2, "我的心愿内容wishDescription2");
+                Skill skill2 = new Skill(R.drawable.user_img2, "Bobby", "I am Bobby", "我是万事屋", R.drawable.wish_pic2, "没错，我就是传说中的万事屋！");
                 skillList.add(skill2);
-                Skill skill3 = new Skill(R.drawable.user_img4, "Jane", "I am Jane", "我的心愿标题wish1", R.drawable.wish_pic1, "我的心愿内容wishDescription1");
-                skillList.add(skill3);
+
             }
         }
 
