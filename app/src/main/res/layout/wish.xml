@@ -33,26 +33,28 @@
             android:layout_gravity="center"
             android:id="@+id/AddressImage"
             android:src="@drawable/ic_room"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
 
         <TextView
+            android:text="广州市"
             android:id="@+id/addressText"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:textSize="18sp"
-            android:text="广州"
             android:layout_marginLeft="5dp"/>
 
         <EditText
-            android:id="@+id/skillSearchEditText"
+            android:id="@+id/wishSearchEditText"
             android:layout_width="0dp"
             android:textSize="18sp"
             android:layout_height="wrap_content"
             android:hint="心愿搜索"
             android:maxLines="1"
-            android:layout_weight="5"/>
+            android:layout_weight="3"/>
 
     </LinearLayout>
 

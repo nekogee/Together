@@ -1,5 +1,6 @@
 package com.nekogee.Together;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,43 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent , int viewType){
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.skill_item , parent , false) ;
-        ViewHolder holder = new ViewHolder(view) ;
+        final ViewHolder holder = new ViewHolder(view) ;
+        holder.skillTitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Skill skill = skillList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , skill.getUserImage());
+                intent.putExtra("extra_userName" , skill.getUserName()) ;
+                intent.putExtra("extra_description" , skill.getSkillDescription()) ;
+                intent.putExtra("extra_descriptionImage" , skill.getSkillImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
+        holder.skillImage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Skill skill = skillList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , skill.getUserImage());
+                intent.putExtra("extra_userName" , skill.getUserName()) ;
+                intent.putExtra("extra_description" , skill.getSkillDescription()) ;
+                intent.putExtra("extra_descriptionImage" , skill.getSkillImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
+        holder.skillDescription.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Skill skill = skillList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , skill.getUserImage());
+                intent.putExtra("extra_userName" , skill.getUserName()) ;
+                intent.putExtra("extra_description" , skill.getSkillDescription()) ;
+                intent.putExtra("extra_descriptionImage" , skill.getSkillImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
         return holder ;
     }
 

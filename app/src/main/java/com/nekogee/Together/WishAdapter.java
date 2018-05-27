@@ -1,11 +1,14 @@
 package com.nekogee.Together;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -37,11 +40,47 @@ public class WishAdapter extends RecyclerView.Adapter<WishAdapter.ViewHolder> {
     public WishAdapter(List<Wish> wishList){
         this.wishList = wishList ;
     }
-
+    View view1 ;
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent , int viewType){
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wish_item , parent , false) ;
-        ViewHolder holder = new ViewHolder(view) ;
+        final ViewHolder holder = new ViewHolder(view) ;
+        holder.wishTitle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Wish wish = wishList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , wish.getUserImage());
+                intent.putExtra("extra_userName" , wish.getUserName()) ;
+                intent.putExtra("extra_description" , wish.getWishDescription()) ;
+                intent.putExtra("extra_descriptionImage" , wish.getWishImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
+        holder.wishDescription.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Wish wish = wishList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , wish.getUserImage());
+                intent.putExtra("extra_userName" , wish.getUserName()) ;
+                intent.putExtra("extra_description" , wish.getWishDescription()) ;
+                intent.putExtra("extra_descriptionImage" , wish.getWishImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
+        holder.wishImage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Wish wish = wishList.get(holder.getAdapterPosition());
+                Intent intent = new Intent(v.getContext() , MessageActivity.class) ;
+                intent.putExtra("extra_userImage" , wish.getUserImage());
+                intent.putExtra("extra_userName" , wish.getUserName()) ;
+                intent.putExtra("extra_description" , wish.getWishDescription()) ;
+                intent.putExtra("extra_descriptionImage" , wish.getWishImage()) ;
+                v.getContext().startActivity(intent) ;
+            }
+        });
         return holder ;
     }
 

@@ -33,16 +33,18 @@
             android:id="@+id/AddressImage"
             android:src="@drawable/ic_room"
             android:layout_gravity="center"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
 
         <TextView
+            android:text="广州市"
             android:id="@+id/addressText"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:textSize="18sp"
-            android:text="广州"
             android:layout_marginLeft="5dp"/>
 
         <EditText
@@ -52,7 +54,7 @@
             android:layout_height="wrap_content"
             android:hint="技能搜索"
             android:maxLines="1"
-            android:layout_weight="5"/>
+            android:layout_weight="3"/>
 
     </LinearLayout>
 
@@ -74,7 +76,7 @@
         <Spinner
             android:id="@+id/wishSpinner"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="right"
             android:background="#FFF"
             android:entries="@array/languages"
@@ -84,7 +86,7 @@
     </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/wish_view"
+            android:id="@+id/skill_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

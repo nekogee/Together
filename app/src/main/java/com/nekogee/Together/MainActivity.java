@@ -3,6 +3,7 @@ package com.nekogee.Together;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
@@ -27,45 +28,58 @@ public class MainActivity extends  AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setNavigationBarColor(Color.BLACK);
-        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-        startActivity(intent);
+        Intent editIntent = getIntent();
+        int editNumber = editIntent.getIntExtra("editChange",0);//判断是从哪个Activity跳转过来的
 
-        Connector.getDatabase();
-        UserInfo userInfo = new UserInfo();
-        userInfo.setBio("大家好");
-        userInfo.setFollower(40);
-        userInfo.setFollowing(23);
-        userInfo.setImageID(R.drawable.pic_1);
-        userInfo.setSkill("skill");
-        userInfo.setWish("wish");
-        userInfo.setUsername("nekogee");
-        userInfo.save();
+        if(editNumber == 0) {    //app初始页面
+            //默认初始活动
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            editNumber = 1 ;
+        }
+        if(editNumber == 1) {    //从WishEditActivity跳转过来
+            replaceFragment(new WishActivity());
+        }
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
+        if(editNumber == 2)      //从SkillEditActivity跳转过来
+            replaceFragment(new SkillActivity());
 
-        //未读消息提示
-        TextBadgeItem numberBadgeItem=new TextBadgeItem();
+/*会出bug的语句↓↓↓*/
+            //    Connector.getDatabase();
+            UserInfo userInfo = new UserInfo();
+            userInfo.setBio("大家好");
+            userInfo.setFollower(40);
+            userInfo.setFollowing(23);
+            userInfo.setImageID(R.drawable.pic_1);
+            userInfo.setSkill("skill");
+            userInfo.setWish("wish");
+            userInfo.setUsername("nekogee");
+            userInfo.save();
 
-        BottomNavigationBar bottomNavigationBar= (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
-        //bottomNavigationBar.setFab(floatingActionButton);
-        bottomNavigationBar.clearAll();
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            ActionBar actionBar = getSupportActionBar();
 
-        bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
-        // bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
-        bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_favorite_border_black_36dp,"心愿").setActiveColorResource(R.color.colorPrimary))
-                .addItem(new BottomNavigationItem(R.drawable.ic_lightbulb_outline_black_36dp,"技能").setActiveColorResource(R.color.colorPrimary))
-                .addItem(new BottomNavigationItem(R.drawable.ic_question_answer_black_36dp,"消息").setActiveColorResource(R.color.colorPrimary).setBadgeItem(numberBadgeItem))
-                .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "我的").setActiveColorResource(R.color.colorPrimary))
-                .setFirstSelectedPosition(1)
-                .initialise();
-        //默认初始活动
-        replaceFragment(new SkillActivity());
-        //未读消息数
-        numberBadgeItem.setText("5");
-        Log.d("qqqq","000b");
+            //未读消息提示
+            TextBadgeItem numberBadgeItem = new TextBadgeItem();
+
+            BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
+            //bottomNavigationBar.setFab(floatingActionButton);
+            bottomNavigationBar.clearAll();
+
+
+            bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
+            // bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
+            bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
+            bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_favorite_border_black_36dp, "心愿").setActiveColorResource(R.color.colorPrimary))
+                    .addItem(new BottomNavigationItem(R.drawable.ic_lightbulb_outline_black_36dp, "技能").setActiveColorResource(R.color.colorPrimary))
+                    .addItem(new BottomNavigationItem(R.drawable.ic_question_answer_black_36dp, "消息").setActiveColorResource(R.color.colorPrimary).setBadgeItem(numberBadgeItem))
+                    .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "我的").setActiveColorResource(R.color.colorPrimary))
+                    .setFirstSelectedPosition(editNumber-1)
+                    .initialise();
+            //未读消息数
+            numberBadgeItem.setText("5");
+            Log.d("qqqq", "000b");
         //下方导航栏的选择事件
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
             @Override
@@ -97,13 +111,19 @@ public class MainActivity extends  AppCompatActivity{
             public void onTabReselected(int position) {
             }
         });
+
     }
 
-    private void replaceFragment(android.support.v4.app.Fragment fragment) {
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment,fragment);
         Log.d("qqqq","ino");
         transaction.commit();
     }
+
+
+
+
+
 }
