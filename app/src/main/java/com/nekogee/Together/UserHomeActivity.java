@@ -26,6 +26,7 @@ public class UserHomeActivity extends android.support.v4.app.Fragment {
             public void onClick(View arg0) {
                 Log.d("pppp","b4add");
                 Intent intent = new Intent(getActivity().getApplicationContext(),UserHomePageActivity.class);
+                //Intent intent = new Intent(getActivity().getApplicationContext(),AnotherActivity.class);
                 Log.d("pppp","b4add");
                 startActivity(intent);
                 //Intent intent = new Intent(UserHomeActivity.this,UserHomePageActivity.class);
