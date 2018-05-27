@@ -27,7 +27,7 @@ public class MainActivity extends  AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setNavigationBarColor(Color.BLACK);
+        getWindow().setNavigationBarColor(Color.parseColor("#000000"));
         Intent editIntent = getIntent();
         int editNumber = editIntent.getIntExtra("editChange",0);//判断是从哪个Activity跳转过来的
 
